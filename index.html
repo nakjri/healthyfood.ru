@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Здоровое питание</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f0f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #800020, #c2185b);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        /* Белый цвет для заголовка и подзаголовка в шапке */
+        header .container h1,
+        header .container p {
+            color: white;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            background-color: #800020;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1.8rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.2s;
+            display: block;
+            padding: 0.8rem 0;
+        }
+        nav ul li a:hover {
+            color: #ffd7e9;
+            transform: translateY(-2px);
+        }
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+            margin: 2.5rem 0;
+        }
+        section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(128, 0, 32, 0.1);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        h1, h2, h3, h4 {
+            color: #800020;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            color: #444;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        li {
+            margin-bottom: 0.6rem;
+        }
+        .card {
+            border: 1px solid #e9b4c7;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(220, 50, 100, 0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            filter: brightness(0.95);
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .recipe-ingredients, .recipe-steps {
+            background-color: #fdf2f7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .recipe-ingredients h4, .recipe-steps h4 {
+            color: #a00037;
+            margin-top: 0;
+        }
+        footer {
+            background-color: #6a001b;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-top: 4px solid #c2185b;
+        }
+        footer p {
+            margin: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 1rem 0;
+            }
+            nav ul li {
+                margin: 0.7rem;
+                text-align: center;
+            }
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Здоровое питание</h1>
+            <p>Путь к здоровью, энергии и долголетию через осознанный выбор продуктов</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#principles">Основные принципы</a></li>
+            <li><a href="#menu">Пример меню</a></li>
+            <li><a href="#recipes">Рецепты</a></li>
+            <li><a href="#tips">Советы экспертов</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="principles">
+                <h2>Основные принципы здорового питания</h2>
+                <p>Здоровое питание — это не временная диета, а образ жизни. Оно помогает поддерживать оптимальный вес, укрепляет иммунитет, улучшает самочувствие и повышает качество жизни.</p>
+                <ul>
+                    <li><strong>Разнообразие продуктов:</strong> включайте в рацион овощи, фрукты, злаки, белки и полезные жиры.</li>
+                    <li><strong>Режим питания:</strong> 3–5 приёмов пищи в день с интервалами 3–4 часа.</li>
+                    <li><strong>Гидратация:</strong> пейте 1.5–2 л чистой воды ежедневно.</li>
+                    <li><strong>Ограничение сахара и соли:</strong> избегайте сладких напитков, конфет, солёных закусок.</li>
+                    <li><strong>Овощи и фрукты:</strong> не менее 400 г в день (5 порций).</li>
+                    <li><strong>Цельные злаки:</strong> отдавайте предпочтение бурому рису, овсянке, цельнозерновому хлебу.</li>
+                    <li><strong>Контроль порций:</strong> используйте правило «тарелки»: половина — овощи, четверть — белок, четверть — углеводы.</li>
+                    <li><strong>Приготовление:</strong> выбирайте варку, запекание, приготовление на пару вместо жарки.</li>
+                </ul>
+                <p>Помните: здоровое питание — это баланс, а не строгие запреты. Разрешайте себе любимые блюда в умеренных количествах.</p>
+            </section>
+
+            <section id="menu">
+                <h2>Пример сбалансированного дневного меню</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Завтрак (8:00)</h3>
+                        <p>Овсяная каша на воде с яблоком и корицей (250 г), яйцо всмятку (1 шт.), зелёный чай без сахара.</p>
+                        <p><em>Польза:</em> медленные углеводы дают энергию, белок поддерживает мышцы, клетчатка улучшает пищеварение.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Перекус (11:00)</h3>
+                        <p>Греческий йогурт (125 г) с горстью грецких орехов (30 г) и чайной ложкой мёда.</p>
+<p><em>Польза:</em> пробиотики для кишечника, здоровые жиры и белок для сытости.</p>
+</div>
+ </div>
+ <div class="card">
+                    <div class="card-content">
+                        <h3>Обед (14:00)</h3>
+                        <p>Куриная грудка на пару (150 г), булгур (150 г), салат из огурцов и помидоров с оливковым маслом (200 г)</p> 
+ <p><em>Польза:</em> источник белка, сложных углеводов и клетчатки, поддержание здорового пищеварения</p>
+                
+                </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Перекус (16:30)</h3>
+                        <p>Банан (1 шт.), творог 5 % (100 г).</p>
+                        <p><em>Польза:</em> быстрый источник энергии, кальций и белок для восстановления мышц.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Ужин (19:00)</h3>
+                        <p>Запечённая рыба (200 г), брокколи на пару (200 г), немного лимонного сока.</p>
+                        <p><em>Польза:</em> омега‑3 из рыбы, клетчатка и витамины из брокколи, лёгкое усвоение.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recipes">
+                <h2>Рецепты здоровых блюд</h2>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Овсяная каша с яблоком и корицей</h3>
+                        <div class="recipe-ingredients">
+                            <h4>Ингредиенты:</h4>
+                            <ul>
+                                <li>Овсяные хлопья — 50 г</li>
+                                <li>Вода — 300 мл</li>
+                                <li>Яблоко — 1 шт. (среднее)</li>
+                                <li>Корица — ½ ч. л.</li>
+                                <li>Мёд (по желанию) — 1 ч. л.</li>
+                            </ul>
+                        </div>
+                        <div class="recipe-steps">
+                            <h4>Приготовление:</h4>
+                            <ol>
+                                <li>Вскипятите воду в кастрюле.</li>
+                                <li>Добавьте овсяные хлопья, убавьте огонь и варите 5–7 минут, помешивая.</li>
+                                <li>Нарежьте яблоко кубиками, добавьте в кашу.</li>
+                                <li>Приправьте корицей, перемешайте.</li>
+                                <li>Перед подачей можно добавить мёд.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Куриная грудка на пару</h3>
+                        <div class="recipe-ingredients">
+                            <h4>Ингредиенты:</h4>
+                            <ul>
+                                <li>Куриная грудка — 150 г</li>
+                                <li>Соль — по вкусу</li>
+                                <li>Чёрный перец — щепотка</li>
+                                <li>Сушёный тимьян — ½ ч. л.</li>
+                                <li>Лимонный сок — 1 ст. л.</li>
+                            </ul>
+                        </div>
+                        <div class="recipe-steps">
+                            <h4>Приготовление:</h4>
+                            <ol>
+                                <li>Промойте куриную грудку, обсушите бумажным полотенцем.</li>
+                                <li>Натрите солью, перцем, тимьяном и лимонным соком.</li>
+                                <li>Поместите в пароварку или в кастрюлю с решёткой над кипящей водой.</li>
+                                <li>Готовьте 15–20 минут до полной готовности.</li>
+                                <li>Подавайте тёплой.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Запечённая рыба с лимоном</h3>
+                        <div class="recipe-ingredients">
+                            <h4>Ингредиенты:</h4>
+                            <ul>
+                                <li>Филе белой рыбы (треска, минтай) — 200 г</li>
+                                <li>Лимон — ½ шт.</li>
+                                <li>Оливковое масло — 1 ч. л.</li>
+                                <li>Соль, перец — по вкусу</li>
+                                <li>Свежая петрушка (для подачи) — несколько веточек</li>
+                            </ul>
+                        </div>
+                        <div class="recipe-steps">
+                            <h4>Приготовление:</h4>
+                            <ol>
+                                <li>Разогрейте духовку до 180 °C.</li>
+                                <li>Выложите рыбу на противень, смазанный маслом.</li>
+                                <li>Посолите, поперчите, сбрызните лимонным соком.</li>
+                                <li>Запекайте 15–20 минут до готовности.</li>
+                                <li>Перед подачей украсьте петрушкой.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tips">
+                <h2>Советы экспертов</h2>
+                <ol>
+                    <li><strong>Планируйте меню заранее:</strong> составляйте список покупок и блюд на неделю — это сэкономит время и снизит риск нездоровых перекусов.</li>
+                    <li><strong>Пейте воду до еды:</strong> стакан воды за 20 минут до приёма пищи помогает контролировать аппетит.</li>
+                    <li><strong>Медленно жуйте:</strong> уделяйте еде 20–30 минут, тщательно пережёвывая каждый кусочек — так лучше усваиваются питательные вещества.</li>
+                    <li><strong>Заменяйте сладости фруктами:</strong> вместо конфет ешьте яблоки, груши или ягоды — это даст витамины и клетчатку.</li>
+                    <li><strong>Готовьте дома:</strong> домашняя еда обычно содержит меньше соли, сахара и консервантов, чем полуфабрикаты.</li>
+                    <li><strong>Держите полезные перекусы под рукой:</strong> орехи, йогурт, фрукты или овощные палочки всегда должны быть в доступе.</li>
+                    <li><strong>Контролируйте размер порций:</strong> используйте тарелки меньшего диаметра, чтобы визуально увеличить количество еды.</li>
+                    <li><strong>Разнообразьте рацион:</strong> каждую неделю пробуйте новый овощ, фрукт или цельнозерновой продукт.</li>
+                </ol>
+            </section>
+
+                      <section id="contacts">
+                <h2 style="text-align: center; color: #800020; margin-bottom: 1.5rem;">Контакты</h2>
+                <p style="text-align: center; color: #444; margin-bottom: 1rem;">Если у вас есть вопросы или пожелания, свяжитесь с нами:</p>
+                <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center; max-width: 400px;">
+                        <li style="margin-bottom: 0.5rem; font-size: 1rem;">Email: health@example.com</li>
+                        <li style="margin-bottom: 0.5rem; font-size: 1rem;">Телефон: +7 (XXX) XXX-XX-XX</li>
+                        <li style="font-size: 1rem;">Адрес: г. Москва, ул. Здорового Питания, д. 1</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0;">
+            <p style="color: white; margin: 0 0 0.5rem 0; font-size: 0.9rem;">&copy; 2025 Здоровое питание. Все права защищены.</p>
+            <p style="color: white; margin: 0; font-size: 0.85rem;">Материалы сайта носят информационный характер и не заменяют консультацию специалиста.</p>
+        </div>
+    </footer>
+</body>
+</html>
